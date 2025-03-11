@@ -50,39 +50,6 @@ Node {
         mipFilter: Texture.Linear
         source: node.textureData27
     }
-    PrincipledMaterial {
-        id: character_material
-        objectName: "Character"
-        baseColorMap: _0_texture
-        roughness: 0.699999988079071
-        cullMode: PrincipledMaterial.NoCulling
-        alphaMode: PrincipledMaterial.Opaque
-    }
-    PrincipledMaterial {
-        id: hairPurple_material
-        objectName: "HairPurple"
-        baseColor: "#ff43001e"
-        roughness: 0.5
-        cullMode: PrincipledMaterial.NoCulling
-        alphaMode: PrincipledMaterial.Opaque
-    }
-    PrincipledMaterial {
-        id: jacket_material
-        objectName: "Jacket"
-        baseColor: "#ff0d02ff"
-        roughness: 0.800000011920929
-        cullMode: PrincipledMaterial.NoCulling
-        alphaMode: PrincipledMaterial.Opaque
-    }
-    PrincipledMaterial {
-        id: pants_material
-        objectName: "Pants"
-        baseColorMap: _1_texture
-        roughness: 0.5
-        normalMap: _2_texture
-        cullMode: PrincipledMaterial.NoCulling
-        alphaMode: PrincipledMaterial.Opaque
-    }
     MorphTarget {
         id: morphTarget
         attributes: MorphTarget.Position | MorphTarget.Normal
@@ -98,30 +65,6 @@ Node {
     MorphTarget {
         id: morphTarget13
         attributes: MorphTarget.Position | MorphTarget.Normal
-    }
-    PrincipledMaterial {
-        id: shirt_material
-        objectName: "Shirt"
-        roughness: 0.800000011920929
-        cullMode: PrincipledMaterial.NoCulling
-        alphaMode: PrincipledMaterial.Opaque
-    }
-    PrincipledMaterial {
-        id: shoes_material
-        objectName: "Shoes"
-        baseColor: "#ff020009"
-        metalness: 0.5681818127632141
-        roughness: 0.4431818127632141
-        cullMode: PrincipledMaterial.NoCulling
-        alphaMode: PrincipledMaterial.Opaque
-    }
-    PrincipledMaterial {
-        id: shoeBlack_material
-        objectName: "ShoeBlack"
-        baseColor: "#ff000000"
-        roughness: 0.5
-        cullMode: PrincipledMaterial.NoCulling
-        alphaMode: PrincipledMaterial.Opaque
     }
     Skin {
         id: skin
@@ -276,17 +219,6 @@ Node {
             Qt.matrix4x4(1, 0, 0, -38.227, 0, 1, 0, -0.838211, 0, 0, 1, 0.249875, 0, 0, 0, 1)
         ]
     }
-    PrincipledMaterial {
-        id: eyes_material
-        objectName: "Eyes"
-        baseColorMap: _3_texture
-        metalnessMap: _4_texture
-        roughnessMap: _4_texture
-        roughness: 1
-        normalMap: _5_texture
-        cullMode: PrincipledMaterial.NoCulling
-        alphaMode: PrincipledMaterial.Opaque
-    }
     MorphTarget {
         id: morphTarget12
         attributes: MorphTarget.Position | MorphTarget.Normal
@@ -298,40 +230,6 @@ Node {
     MorphTarget {
         id: morphTarget10
         attributes: MorphTarget.Position | MorphTarget.Normal
-    }
-    PrincipledMaterial {
-        id: insideMouth_material
-        objectName: "InsideMouth"
-        baseColor: "#ffcc2622"
-        roughness: 0.5
-        cullMode: PrincipledMaterial.NoCulling
-        alphaMode: PrincipledMaterial.Opaque
-    }
-    PrincipledMaterial {
-        id: teeth_material
-        objectName: "Teeth"
-        baseColor: "#ffcccccc"
-        roughness: 0.5
-        cullMode: PrincipledMaterial.NoCulling
-        alphaMode: PrincipledMaterial.Opaque
-    }
-    PrincipledMaterial {
-        id: hairBlack_material
-        objectName: "HairBlack"
-        baseColor: "#ff000000"
-        metalness: 0.4909090995788574
-        roughness: 0.5
-        cullMode: PrincipledMaterial.NoCulling
-        alphaMode: PrincipledMaterial.Opaque
-    }
-    PrincipledMaterial {
-        id: hairGold_material
-        objectName: "HairGold"
-        baseColor: "#ffc9cc00"
-        metalness: 0.5795454382896423
-        roughness: 0.5
-        cullMode: PrincipledMaterial.NoCulling
-        alphaMode: PrincipledMaterial.Opaque
     }
     MorphTarget {
         id: morphTarget17
@@ -578,14 +476,14 @@ Node {
                                 Model {
                                     id: leftEye
                                     objectName: "LeftEye"
-                                    x: 2.84719021692581e-08
-                                    y: -6.437532817926694e-08
-                                    z: -3.710674434387329e-07
-                                    rotation: Qt.quaternion(0.99986, -0.0167228, 7.54873e-08, 1.26254e-09)
+                                    x: 0.22368507087230682
+                                    y: -0.26290175318717957
+                                    z: -2.2155628204345703
+                                    rotation: Qt.quaternion(-2.18691e-08, -2.18691e-08, 0.707107, 0.707107)
                                     scale.x: 1
                                     scale.y: 1
                                     scale.z: 1
-                                    source: "meshes/sphere_001_mesh.mesh"
+                                    source: "meshes/sphere_002_mesh.mesh"
                                     materials: [
                                         eyes_material
                                     ]
@@ -604,10 +502,10 @@ Node {
                                 Model {
                                     id: rightEye
                                     objectName: "RightEye"
-                                    x: 1.1040961922503811e-08
-                                    y: -0.006851942744106054
-                                    z: -3.262184122831968e-07
-                                    rotation: Qt.quaternion(0.985166, 0.0100815, -0.168595, 0.0303548)
+                                    x: -0.22452828288078308
+                                    y: -0.267054945230484
+                                    z: -2.208390235900879
+                                    rotation: Qt.quaternion(2.18692e-08, 2.18691e-08, 0.707107, 0.707107)
                                     scale.x: 1
                                     scale.y: 1
                                     scale.z: 1
@@ -1324,7 +1222,7 @@ Node {
             z: -4.116494178771973
         }
         Node {
-            id: jaw136
+            id: jaw137
             objectName: "Jaw"
             x: 14.133747100830078
             z: -3.1070070266723633
@@ -1371,7 +1269,7 @@ Node {
             scale.z: 0.571547
         }
         Node {
-            id: root142
+            id: root143
             objectName: "Root"
             x: 38.227012634277344
             y: 0.8382105231285095
@@ -1379,5 +1277,129 @@ Node {
         }
     }
 
+    Node {
+        id: __materialLibrary__
+
+        PrincipledMaterial {
+            id: character_material
+            objectName: "Character"
+            baseColorMap: _0_texture
+            roughness: 0.699999988079071
+            cullMode: PrincipledMaterial.NoCulling
+            alphaMode: PrincipledMaterial.Opaque
+        }
+
+        PrincipledMaterial {
+            id: hairPurple_material
+            objectName: "HairPurple"
+            baseColor: "#ff43001e"
+            roughness: 0.5
+            cullMode: PrincipledMaterial.NoCulling
+            alphaMode: PrincipledMaterial.Opaque
+        }
+
+        PrincipledMaterial {
+            id: jacket_material
+            objectName: "Jacket"
+            baseColor: "#ff0d02ff"
+            roughness: 0.800000011920929
+            cullMode: PrincipledMaterial.NoCulling
+            alphaMode: PrincipledMaterial.Opaque
+        }
+
+        PrincipledMaterial {
+            id: pants_material
+            objectName: "Pants"
+            baseColorMap: _1_texture
+            roughness: 0.5
+            normalMap: _2_texture
+            cullMode: PrincipledMaterial.NoCulling
+            alphaMode: PrincipledMaterial.Opaque
+        }
+
+        PrincipledMaterial {
+            id: shirt_material
+            objectName: "Shirt"
+            roughness: 0.800000011920929
+            cullMode: PrincipledMaterial.NoCulling
+            alphaMode: PrincipledMaterial.Opaque
+        }
+
+        PrincipledMaterial {
+            id: shoes_material
+            objectName: "Shoes"
+            baseColor: "#ff020009"
+            metalness: 0.5681818127632141
+            roughness: 0.4431818127632141
+            cullMode: PrincipledMaterial.NoCulling
+            alphaMode: PrincipledMaterial.Opaque
+        }
+
+        PrincipledMaterial {
+            id: shoeBlack_material
+            objectName: "ShoeBlack"
+            baseColor: "#ff000000"
+            roughness: 0.5
+            cullMode: PrincipledMaterial.NoCulling
+            alphaMode: PrincipledMaterial.Opaque
+        }
+
+        PrincipledMaterial {
+            id: eyes_material
+            objectName: "Eyes"
+            baseColorMap: _3_texture
+            metalnessMap: _4_texture
+            roughnessMap: _4_texture
+            roughness: 1
+            normalMap: _5_texture
+            cullMode: PrincipledMaterial.NoCulling
+            alphaMode: PrincipledMaterial.Opaque
+        }
+
+        PrincipledMaterial {
+            id: insideMouth_material
+            objectName: "InsideMouth"
+            baseColor: "#ffcc2622"
+            roughness: 0.5
+            cullMode: PrincipledMaterial.NoCulling
+            alphaMode: PrincipledMaterial.Opaque
+        }
+
+        PrincipledMaterial {
+            id: teeth_material
+            objectName: "Teeth"
+            baseColor: "#ffcccccc"
+            roughness: 0.5
+            cullMode: PrincipledMaterial.NoCulling
+            alphaMode: PrincipledMaterial.Opaque
+        }
+
+        PrincipledMaterial {
+            id: hairBlack_material
+            objectName: "HairBlack"
+            baseColor: "#ff000000"
+            metalness: 0.4909090995788574
+            roughness: 0.5
+            cullMode: PrincipledMaterial.NoCulling
+            alphaMode: PrincipledMaterial.Opaque
+        }
+
+        PrincipledMaterial {
+            id: hairGold_material
+            objectName: "HairGold"
+            baseColor: "#ffc9cc00"
+            metalness: 0.5795454382896423
+            roughness: 0.5
+            cullMode: PrincipledMaterial.NoCulling
+            alphaMode: PrincipledMaterial.Opaque
+        }
+    }
+
     // Animations:
 }
+
+/*##^##
+Designer {
+    D{i:0;cameraSpeed3d:25;cameraSpeed3dMultiplier:1}
+}
+##^##*/

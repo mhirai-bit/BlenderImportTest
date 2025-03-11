@@ -2,6 +2,7 @@ import QtQuick
 import QtQuick3D
 
 import QtQuick.Timeline
+import Generated.QtQuick3D.Character_retry4
 
 Node {
     id: node
@@ -30,80 +31,6 @@ Node {
         generateMipmaps: true
         mipFilter: Texture.Linear
         source: "maps/Cartoon_Eye_Brown_Normal.png"
-    }
-    PrincipledMaterial {
-        id: shirt_material
-        objectName: "Shirt"
-        roughness: 0.800000011920929
-    }
-    PrincipledMaterial {
-        id: pants_material
-        objectName: "Pants"
-        baseColor: "#ffcccccc"
-        roughness: 0.5
-    }
-    PrincipledMaterial {
-        id: shoes_material
-        objectName: "Shoes"
-        baseColor: "#ff020009"
-        roughness: 0.4431818127632141
-    }
-    PrincipledMaterial {
-        id: shoeBlack_material
-        objectName: "ShoeBlack"
-        baseColor: "#ff000000"
-        roughness: 0.5
-    }
-    PrincipledMaterial {
-        id: shirt_001_material
-        objectName: "Shirt.001"
-        baseColor: "#ff0d02ff"
-        roughness: 0.800000011920929
-    }
-    PrincipledMaterial {
-        id: hairBlack_material
-        objectName: "HairBlack"
-        baseColor: "#ff000000"
-        roughness: 0.5
-    }
-    PrincipledMaterial {
-        id: character_material
-        objectName: "Character"
-        baseColor: "#ffcccccc"
-        baseColorMap: chraracter_png_texture
-        roughness: 0.699999988079071
-    }
-    PrincipledMaterial {
-        id: insideMouth_material
-        objectName: "InsideMouth"
-        baseColor: "#ffcc2622"
-        roughness: 0.5
-    }
-    PrincipledMaterial {
-        id: teeth_material
-        objectName: "Teeth"
-        baseColor: "#ffcccccc"
-        roughness: 0.5
-    }
-    PrincipledMaterial {
-        id: hairPurple_material
-        objectName: "HairPurple"
-        baseColor: "#ff43001e"
-        roughness: 0.5
-    }
-    PrincipledMaterial {
-        id: hairGold_material
-        objectName: "HairGold"
-        baseColor: "#ffc9cc00"
-        roughness: 0.5
-    }
-    PrincipledMaterial {
-        id: eyes_material
-        objectName: "Eyes"
-        baseColor: "#ffcccccc"
-        baseColorMap: cartoon_Eye_Brown_Cartoon_Eye_Brown_BaseColor_png_texture
-        roughness: 0.5
-        normalMap: cartoon_Eye_Brown_Cartoon_Eye_Brown_Normal_png_texture
     }
 
     // Nodes:
@@ -10741,6 +10668,96 @@ Node {
             target: upperLeg_R
             property: "rotation"
             keyframeSource: "animations/upperLeg_R_rotation_15.qad"
+        }
+    }
+
+    Node {
+        id: __materialLibrary__
+
+        PrincipledMaterial {
+            id: shirt_material
+            objectName: "Shirt"
+            roughness: 0.800000011920929
+        }
+
+        PrincipledMaterial {
+            id: pants_material
+            objectName: "Pants"
+            baseColor: "#ffcccccc"
+            roughness: 0.5
+        }
+
+        PrincipledMaterial {
+            id: shoes_material
+            objectName: "Shoes"
+            baseColor: "#ff020009"
+            roughness: 0.4431818127632141
+        }
+
+        PrincipledMaterial {
+            id: shoeBlack_material
+            objectName: "ShoeBlack"
+            baseColor: "#ff000000"
+            roughness: 0.5
+        }
+
+        PrincipledMaterial {
+            id: shirt_001_material
+            objectName: "Shirt.001"
+            baseColor: "#ff0d02ff"
+            roughness: 0.800000011920929
+        }
+
+        PrincipledMaterial {
+            id: hairBlack_material
+            objectName: "HairBlack"
+            baseColor: "#ff000000"
+            roughness: 0.5
+        }
+
+        PrincipledMaterial {
+            id: character_material
+            objectName: "Character"
+            baseColor: "#ffcccccc"
+            baseColorMap: chraracter_png_texture
+            roughness: 0.699999988079071
+        }
+
+        PrincipledMaterial {
+            id: insideMouth_material
+            objectName: "InsideMouth"
+            baseColor: "#ffcc2622"
+            roughness: 0.5
+        }
+
+        PrincipledMaterial {
+            id: teeth_material
+            objectName: "Teeth"
+            baseColor: "#ffcccccc"
+            roughness: 0.5
+        }
+
+        PrincipledMaterial {
+            id: hairPurple_material
+            objectName: "HairPurple"
+            baseColor: "#ff43001e"
+            roughness: 0.5
+        }
+
+        PrincipledMaterial {
+            id: hairGold_material
+            objectName: "HairGold"
+            baseColor: "#ffc9cc00"
+            roughness: 0.5
+        }
+
+        PrincipledMaterial {
+            id: eyes_material
+            objectName: "Eyes"
+            baseColor: "#ffcccccc"
+            baseColorMap: cartoon_Eye_Brown_Cartoon_Eye_Brown_BaseColor_png_texture
+            roughness: 0.5
+            normalMap: cartoon_Eye_Brown_Cartoon_Eye_Brown_Normal_png_texture
         }
     }
 }

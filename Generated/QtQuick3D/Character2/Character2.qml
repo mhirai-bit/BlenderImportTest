@@ -186,18 +186,6 @@ Node {
             Qt.matrix4x4(0.01, 0, 0, -38.227, 0, 0.01, 0, -0.838211, 0, 0, 0.01, 0.249875, 0, 0, 0, 1)
         ]
     }
-    PrincipledMaterial {
-        id: shoes_material
-        objectName: "Shoes"
-        baseColor: "#ff020009"
-        roughness: 0.4431818127632141
-    }
-    PrincipledMaterial {
-        id: shoeBlack_material
-        objectName: "ShoeBlack"
-        baseColor: "#ff000000"
-        roughness: 0.5
-    }
     Skin {
         id: skin14
         joints: [
@@ -212,12 +200,6 @@ Node {
             Qt.matrix4x4(0.00986634, -0.000737409, 0.00145314, 0.160993, -0.000432827, -0.00978309, -0.00202577, 0.516579, 0.001571, 0.0019358, -0.00968425, -0.0671305, 0, 0, 0, 1),
             Qt.matrix4x4(-0.00990368, -0.000285501, -0.00135483, -0.146189, -0.00128424, -0.00176317, 0.0097592, 0.0692277, -0.000517506, 0.00983918, 0.00170952, -0.137995, 0, 0, 0, 1)
         ]
-    }
-    PrincipledMaterial {
-        id: shirt_001_material
-        objectName: "Shirt.001"
-        baseColor: "#ff0d02ff"
-        roughness: 0.800000011920929
     }
     Skin {
         id: skin18
@@ -371,25 +353,6 @@ Node {
             Qt.matrix4x4(-0.0099874, -0.000501854, 1.75705e-10, 0.152387, 1.67147e-10, -4.39169e-11, 0.01, -0.474995, -0.000501853, 0.0099874, 1.21224e-10, -0.523253, 0, 0, 0, 1),
             Qt.matrix4x4(0.01, 0, 0, -38.227, 0, 0.01, 0, -0.838211, 0, 0, 0.01, 0.249875, 0, 0, 0, 1)
         ]
-    }
-    PrincipledMaterial {
-        id: character_material
-        objectName: "Character"
-        baseColor: "#ffcccccc"
-        baseColorMap: chraracter_png_texture
-        roughness: 0.699999988079071
-    }
-    PrincipledMaterial {
-        id: insideMouth_material
-        objectName: "InsideMouth"
-        baseColor: "#ffcc2622"
-        roughness: 0.5
-    }
-    PrincipledMaterial {
-        id: teeth_material
-        objectName: "Teeth"
-        baseColor: "#ffcccccc"
-        roughness: 0.5
     }
     Skin {
         id: skin5
@@ -578,43 +541,6 @@ Node {
         id: morphTarget34
         weight: 1
         attributes: MorphTarget.Position | MorphTarget.Normal
-    }
-    PrincipledMaterial {
-        id: hairBlack_material
-        objectName: "HairBlack"
-        baseColor: "#ff000000"
-        roughness: 0.5
-    }
-    PrincipledMaterial {
-        id: hairPurple_material
-        objectName: "HairPurple"
-        baseColor: "#ff43001e"
-        roughness: 0.5
-    }
-    PrincipledMaterial {
-        id: hairGold_material
-        objectName: "HairGold"
-        baseColor: "#ffc9cc00"
-        roughness: 0.5
-    }
-    PrincipledMaterial {
-        id: eyes_material
-        objectName: "Eyes"
-        baseColor: "#ffcccccc"
-        baseColorMap: cartoon_Eye_Brown_Cartoon_Eye_Brown_BaseColor_png_texture
-        roughness: 0.5
-        normalMap: cartoon_Eye_Brown_Cartoon_Eye_Brown_Normal_png_texture
-    }
-    PrincipledMaterial {
-        id: shirt_material
-        objectName: "Shirt"
-        roughness: 0.800000011920929
-    }
-    PrincipledMaterial {
-        id: pants_material
-        objectName: "Pants"
-        baseColor: "#ffcccccc"
-        roughness: 0.5
     }
 
     // Nodes:
@@ -6277,6 +6203,96 @@ Node {
             target: empty_002
             property: "rotation"
             keyframeSource: "animations/empty_002_rotation_11.qad"
+        }
+    }
+
+    Node {
+        id: __materialLibrary__
+
+        PrincipledMaterial {
+            id: shoes_material
+            objectName: "Shoes"
+            baseColor: "#ff020009"
+            roughness: 0.4431818127632141
+        }
+
+        PrincipledMaterial {
+            id: shoeBlack_material
+            objectName: "ShoeBlack"
+            baseColor: "#ff000000"
+            roughness: 0.5
+        }
+
+        PrincipledMaterial {
+            id: shirt_001_material
+            objectName: "Shirt.001"
+            baseColor: "#ff0d02ff"
+            roughness: 0.800000011920929
+        }
+
+        PrincipledMaterial {
+            id: character_material
+            objectName: "Character"
+            baseColor: "#ffcccccc"
+            baseColorMap: chraracter_png_texture
+            roughness: 0.699999988079071
+        }
+
+        PrincipledMaterial {
+            id: insideMouth_material
+            objectName: "InsideMouth"
+            baseColor: "#ffcc2622"
+            roughness: 0.5
+        }
+
+        PrincipledMaterial {
+            id: teeth_material
+            objectName: "Teeth"
+            baseColor: "#ffcccccc"
+            roughness: 0.5
+        }
+
+        PrincipledMaterial {
+            id: hairBlack_material
+            objectName: "HairBlack"
+            baseColor: "#ff000000"
+            roughness: 0.5
+        }
+
+        PrincipledMaterial {
+            id: hairPurple_material
+            objectName: "HairPurple"
+            baseColor: "#ff43001e"
+            roughness: 0.5
+        }
+
+        PrincipledMaterial {
+            id: hairGold_material
+            objectName: "HairGold"
+            baseColor: "#ffc9cc00"
+            roughness: 0.5
+        }
+
+        PrincipledMaterial {
+            id: eyes_material
+            objectName: "Eyes"
+            baseColor: "#ffcccccc"
+            baseColorMap: cartoon_Eye_Brown_Cartoon_Eye_Brown_BaseColor_png_texture
+            roughness: 0.5
+            normalMap: cartoon_Eye_Brown_Cartoon_Eye_Brown_Normal_png_texture
+        }
+
+        PrincipledMaterial {
+            id: shirt_material
+            objectName: "Shirt"
+            roughness: 0.800000011920929
+        }
+
+        PrincipledMaterial {
+            id: pants_material
+            objectName: "Pants"
+            baseColor: "#ffcccccc"
+            roughness: 0.5
         }
     }
 }

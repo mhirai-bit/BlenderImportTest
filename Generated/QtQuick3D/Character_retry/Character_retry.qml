@@ -1,5 +1,6 @@
 import QtQuick
 import QtQuick3D
+import Generated.QtQuick3D.Character_retry1
 
 Node {
     id: node
@@ -128,11 +129,13 @@ Node {
                 id: jacket
                 objectName: "Jacket"
                 z: 0.46437883377075195
-                rotation: Qt.quaternion(0.5, 0.5, -0.5, 0.5)
                 scale.x: 0.01
                 scale.y: 0.01
                 scale.z: 0.01
                 source: "meshes/plane_007_mesh.mesh"
+                eulerRotation.z: 95.71473
+                eulerRotation.y: 3.49062
+                eulerRotation.x: 79.21563
                 materials: [
                     shirt_001_material
                 ]
@@ -264,11 +267,13 @@ Node {
                                 x: -0.034352175891399384
                                 y: 0.8990921378135681
                                 z: 0.6010847091674805
-                                rotation: Qt.quaternion(-0.0112959, 0.707017, 0.707016, 0.0112969)
                                 scale.x: 0.01
                                 scale.y: 0.01
                                 scale.z: 0.01
                                 source: "meshes/b_zierCurve_004_mesh.mesh"
+                                eulerRotation.z: 90.00009
+                                eulerRotation.y: 179.99992
+                                eulerRotation.x: -1.83074
                                 materials: [
                                     hairPurple_material
                                 ]

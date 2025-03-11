@@ -2,6 +2,7 @@ import QtQuick
 import QtQuick3D
 
 import QtQuick.Timeline
+import Generated.QtQuick3D.Character_retry2
 
 Node {
     id: node
@@ -30,43 +31,6 @@ Node {
         generateMipmaps: true
         mipFilter: Texture.Linear
         source: "maps/Cartoon_Eye_Brown_BaseColor.png"
-    }
-    PrincipledMaterial {
-        id: shoeBlack_material
-        objectName: "ShoeBlack"
-        baseColor: "#ff000000"
-        roughness: 0.5
-    }
-    PrincipledMaterial {
-        id: shirt_001_material
-        objectName: "Shirt.001"
-        baseColor: "#ff0d02ff"
-        roughness: 0.800000011920929
-    }
-    PrincipledMaterial {
-        id: character_material
-        objectName: "Character"
-        baseColor: "#ffcccccc"
-        baseColorMap: chraracter_png_texture
-        roughness: 0.699999988079071
-    }
-    PrincipledMaterial {
-        id: pants_material
-        objectName: "Pants"
-        baseColor: "#ffcccccc"
-        roughness: 0.5
-    }
-    PrincipledMaterial {
-        id: insideMouth_material
-        objectName: "InsideMouth"
-        baseColor: "#ffcc2622"
-        roughness: 0.5
-    }
-    PrincipledMaterial {
-        id: teeth_material
-        objectName: "Teeth"
-        baseColor: "#ffcccccc"
-        roughness: 0.5
     }
     MorphTarget {
         id: morphTarget
@@ -107,43 +71,6 @@ Node {
         id: morphTarget29
         weight: 1
         attributes: MorphTarget.Position | MorphTarget.Normal
-    }
-    PrincipledMaterial {
-        id: hairBlack_material
-        objectName: "HairBlack"
-        baseColor: "#ff000000"
-        roughness: 0.5
-    }
-    PrincipledMaterial {
-        id: hairPurple_material
-        objectName: "HairPurple"
-        baseColor: "#ff43001e"
-        roughness: 0.5
-    }
-    PrincipledMaterial {
-        id: hairGold_material
-        objectName: "HairGold"
-        baseColor: "#ffc9cc00"
-        roughness: 0.5
-    }
-    PrincipledMaterial {
-        id: eyes_material
-        objectName: "Eyes"
-        baseColor: "#ffcccccc"
-        baseColorMap: cartoon_Eye_Brown_Cartoon_Eye_Brown_BaseColor_png_texture
-        roughness: 0.5
-        normalMap: cartoon_Eye_Brown_Cartoon_Eye_Brown_Normal_png_texture
-    }
-    PrincipledMaterial {
-        id: shirt_material
-        objectName: "Shirt"
-        roughness: 0.800000011920929
-    }
-    PrincipledMaterial {
-        id: shoes_material
-        objectName: "Shoes"
-        baseColor: "#ff020009"
-        roughness: 0.4431818127632141
     }
 
     // Nodes:
@@ -217,11 +144,13 @@ Node {
                 id: body
                 objectName: "Body"
                 z: 0.46437883377075195
-                rotation: Qt.quaternion(0.5, 0.5, -0.5, 0.5)
                 scale.x: 0.01
                 scale.y: 0.01
                 scale.z: 0.01
                 source: "meshes/body_mesh.mesh"
+                eulerRotation.z: -0.00008
+                eulerRotation.y: -90.86407
+                eulerRotation.x: 85.3352
                 materials: [
                     character_material,
                     insideMouth_material,
@@ -307,14 +236,16 @@ Node {
                             Model {
                                 id: baseHair
                                 objectName: "BaseHair"
-                                x: 2.8899281460326165e-05
-                                y: 0.3758269250392914
-                                z: -0.18947505950927734
-                                rotation: Qt.quaternion(0.491949, 0.507924, 0.507923, -0.491948)
+                                x: -0.041
+                                y: 0.421
+                                z: -0.17744
                                 scale.x: 0.000415266
                                 scale.y: 0.000415266
                                 scale.z: 0.000415266
                                 source: "meshes/plane_002_mesh.mesh"
+                                eulerRotation.z: 58.18203
+                                eulerRotation.y: 163.13498
+                                eulerRotation.x: 72.79762
                                 materials: [
                                     hairBlack_material
                                 ]
@@ -322,14 +253,16 @@ Node {
                             Model {
                                 id: blackHair
                                 objectName: "BlackHair"
-                                x: 0.07413547486066818
-                                y: 1.0548750162124634
-                                z: 0.24501991271972656
-                                rotation: Qt.quaternion(-0.0112959, 0.707017, 0.707016, 0.0112969)
+                                x: 0.118
+                                y: 1.208
+                                z: 0.40333
                                 scale.x: 0.01
                                 scale.y: 0.01
                                 scale.z: 0.01
                                 source: "meshes/b_zierCurve_003_mesh.mesh"
+                                eulerRotation.z: 79.8596
+                                eulerRotation.y: -154.70961
+                                eulerRotation.x: -1.45017
                                 materials: [
                                     hairBlack_material
                                 ]
@@ -337,14 +270,16 @@ Node {
                             Model {
                                 id: purpleHair
                                 objectName: "PurpleHair"
-                                x: -0.034352175891399384
-                                y: 0.8990921378135681
-                                z: 0.6010847091674805
-                                rotation: Qt.quaternion(-0.0112959, 0.707017, 0.707016, 0.0112969)
+                                x: 0.199
+                                y: 0.844
+                                z: 0.71151
                                 scale.x: 0.01
                                 scale.y: 0.01
                                 scale.z: 0.01
                                 source: "meshes/b_zierCurve_004_mesh.mesh"
+                                eulerRotation.z: 79.63333
+                                eulerRotation.y: -153.2048
+                                eulerRotation.x: -15.98031
                                 materials: [
                                     hairPurple_material
                                 ]
@@ -352,14 +287,16 @@ Node {
                             Model {
                                 id: goldHair
                                 objectName: "GoldHair"
-                                x: 0.05219673365354538
-                                y: 0.8818373680114746
-                                z: -0.1405634880065918
-                                rotation: Qt.quaternion(-0.0112959, 0.707017, 0.707016, 0.0112969)
+                                x: -0.053
+                                y: 0.891
+                                z: -0.05862
                                 scale.x: 0.01
                                 scale.y: 0.01
                                 scale.z: 0.01
                                 source: "meshes/b_zierCurve_002_mesh.mesh"
+                                eulerRotation.z: 84.23601
+                                eulerRotation.y: -158.68288
+                                eulerRotation.x: -1.59067
                                 materials: [
                                     hairGold_material
                                 ]
@@ -480,12 +417,15 @@ Node {
                                 scale.z: 1
                                 Model {
                                     id: leftEye
+                                    x: -0.186
+                                    y: -0.168
                                     objectName: "LeftEye"
                                     rotation: Qt.quaternion(0.491688, -0.508176, 0.508178, 0.491686)
                                     scale.x: 0.01
                                     scale.y: 0.01
                                     scale.z: 0.01
                                     source: "meshes/sphere_001_mesh.mesh"
+                                    z: 0.00554
                                     materials: [
                                         eyes_material
                                     ]
@@ -509,13 +449,14 @@ Node {
                                 Model {
                                     id: rightEye
                                     objectName: "RightEye"
-                                    x: 1.4901161193847656e-08
-                                    y: -0.006851963698863983
+                                    x: -0.251
+                                    y: -0.008
                                     rotation: Qt.quaternion(0.504281, -0.495682, 0.495681, 0.504282)
                                     scale.x: 0.01
                                     scale.y: 0.01
                                     scale.z: 0.01
                                     source: "meshes/sphere_002_mesh.mesh"
+                                    z: 0.08278
                                     materials: [
                                         eyes_material
                                     ]
@@ -10846,6 +10787,96 @@ Node {
             target: upperLeg_R
             property: "rotation"
             keyframeSource: "animations/upperLeg_R_rotation_15.qad"
+        }
+    }
+
+    Node {
+        id: __materialLibrary__
+
+        PrincipledMaterial {
+            id: shoeBlack_material
+            objectName: "ShoeBlack"
+            baseColor: "#ff000000"
+            roughness: 0.5
+        }
+
+        PrincipledMaterial {
+            id: shirt_001_material
+            objectName: "Shirt.001"
+            baseColor: "#ff0d02ff"
+            roughness: 0.800000011920929
+        }
+
+        PrincipledMaterial {
+            id: character_material
+            objectName: "Character"
+            baseColor: "#ffcccccc"
+            baseColorMap: chraracter_png_texture
+            roughness: 0.699999988079071
+        }
+
+        PrincipledMaterial {
+            id: pants_material
+            objectName: "Pants"
+            baseColor: "#ffcccccc"
+            roughness: 0.5
+        }
+
+        PrincipledMaterial {
+            id: insideMouth_material
+            objectName: "InsideMouth"
+            baseColor: "#ffcc2622"
+            roughness: 0.5
+        }
+
+        PrincipledMaterial {
+            id: teeth_material
+            objectName: "Teeth"
+            baseColor: "#ffcccccc"
+            roughness: 0.5
+        }
+
+        PrincipledMaterial {
+            id: hairBlack_material
+            objectName: "HairBlack"
+            baseColor: "#ff000000"
+            roughness: 0.5
+        }
+
+        PrincipledMaterial {
+            id: hairPurple_material
+            objectName: "HairPurple"
+            baseColor: "#ff43001e"
+            roughness: 0.5
+        }
+
+        PrincipledMaterial {
+            id: hairGold_material
+            objectName: "HairGold"
+            baseColor: "#ffc9cc00"
+            roughness: 0.5
+        }
+
+        PrincipledMaterial {
+            id: eyes_material
+            objectName: "Eyes"
+            baseColor: "#ffcccccc"
+            baseColorMap: cartoon_Eye_Brown_Cartoon_Eye_Brown_BaseColor_png_texture
+            roughness: 0.5
+            normalMap: cartoon_Eye_Brown_Cartoon_Eye_Brown_Normal_png_texture
+        }
+
+        PrincipledMaterial {
+            id: shirt_material
+            objectName: "Shirt"
+            roughness: 0.800000011920929
+        }
+
+        PrincipledMaterial {
+            id: shoes_material
+            objectName: "Shoes"
+            baseColor: "#ff020009"
+            roughness: 0.4431818127632141
         }
     }
 }

@@ -1,5 +1,6 @@
 import QtQuick
 import QtQuick3D
+import Generated.QtQuick3D.Character_retry5
 
 Node {
     id: node

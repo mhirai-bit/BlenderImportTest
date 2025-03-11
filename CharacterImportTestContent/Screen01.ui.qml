@@ -15,6 +15,7 @@ import Generated.QtQuick3D.Character
 import Generated.QtQuick3D.Character1
 import Generated.QtQuick3D.Character2
 import Generated.QtQuick3D.Character6_applied_modifiers_for_Body
+import Generated.QtQuick3D.Character_retry
 
 Rectangle {
     width: Constants.width
