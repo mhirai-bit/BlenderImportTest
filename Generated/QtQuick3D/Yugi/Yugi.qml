@@ -14,6 +14,14 @@ Node {
     property url textureData56: "maps/textureData56.png"
     property url textureData27: "maps/textureData27.png"
     property url textureData25: "maps/textureData25.png"
+    property alias smileWeight: morphTarget.weight
+    property alias jawWeight: morphTarget15.weight
+    property alias frownWeight: morphTarget14.weight
+    property alias eyeBrowRightWeight: morphTarget13.weight
+    property alias eyeBrowLeftWeight: morphTarget12.weight
+    property alias rightEyeWeight: morphTarget11.weight
+    property alias leftEyeWeight: morphTarget10.weight
+    property alias sadWeight: morphTarget17.weight
     Texture {
         id: _1_texture
         generateMipmaps: true
@@ -52,18 +60,26 @@ Node {
     }
     MorphTarget {
         id: morphTarget
+        // smile
+        weight: 0
         attributes: MorphTarget.Position | MorphTarget.Normal
     }
     MorphTarget {
         id: morphTarget15
+        weight: 0
+        // jaw
         attributes: MorphTarget.Position | MorphTarget.Normal
     }
     MorphTarget {
         id: morphTarget14
+        // frown
+        weight: 0
         attributes: MorphTarget.Position | MorphTarget.Normal
     }
     MorphTarget {
         id: morphTarget13
+        // eyeBrowRight
+        weight: 0
         attributes: MorphTarget.Position | MorphTarget.Normal
     }
     Skin {
@@ -221,18 +237,26 @@ Node {
     }
     MorphTarget {
         id: morphTarget12
+        // eyeBrowLeft
+        weight: 0
         attributes: MorphTarget.Position | MorphTarget.Normal
     }
     MorphTarget {
         id: morphTarget11
+        // rightEye
+        weight: 0
         attributes: MorphTarget.Position | MorphTarget.Normal
     }
     MorphTarget {
         id: morphTarget10
+        // leftEye
+        weight: 0
         attributes: MorphTarget.Position | MorphTarget.Normal
     }
     MorphTarget {
         id: morphTarget17
+        // sad
+        weight: 0
         attributes: MorphTarget.Position | MorphTarget.Normal
     }
 
